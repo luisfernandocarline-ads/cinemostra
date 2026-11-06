@@ -1,1 +1,12 @@
 ﻿/* layout.css: estrutura da página */
+
+.topo,
+.rodape {
+    background-color: #bf360c;
+    color: #ffffff;
+    padding: 14px 28px;
+}
+
+.rodape {
+    text-align: center;
+}

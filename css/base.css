@@ -1,1 +1,48 @@
 ﻿/* base.css: reset e tipografia */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f2f2f2;
+    color: #222222;
+}
+
+h1 {
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.introducao {
+    max-width: 700px;
+}
+
+.genero {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sinopse {
+    font-size: 0.95em;
+}
+
+.preco {
+    font-weight: bold;
+    color: #bf360c;
+}
