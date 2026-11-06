@@ -110,7 +110,70 @@
                 <li>Informe seus dados</li>
                 <li>Confirme a reserva</li>
             </ol>
-            <!-- Checkpoint 3: o formulário entra aqui -->
+            <form id="formReserva" class="formulario" method="POST">
+
+                <h3>Dados do espectador</h3>
+                <div class="grupo">
+                    <div class="campo campo-largo">
+                        <label for="nome" class="obrigatorio">Nome completo</label>
+                        <input type="text" id="nome" name="nome" required minlength="3">
+                    </div>
+                    <div class="campo">
+                        <label for="email" class="obrigatorio">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\) \d{5}-\d{4}" title="Use o formato (16) 99999-9999">
+                    </div>
+                    <div class="campo">
+                        <label for="nascimento">Data de nascimento</label>
+                        <input type="date" id="nascimento" name="nascimento" max="2026-11-07">
+                    </div>
+                </div>
+
+                <h3>Sessão</h3>
+                <div class="grupo">
+                    <div class="campo">
+                        <label for="filme" class="obrigatorio">Filme</label>
+                        <select id="filme" name="filme" required>
+                            <option value="" disabled selected>Escolha um filme</option>
+                            <option value="trem">O Trem das Seis e Meia</option>
+                            <option value="sol">Cinco Dias de Sol</option>
+                            <option value="rio">Vozes do Rio Pardo</option>
+                            <option value="mare">A Casa da Maré</option>
+                            <option value="astro">Pequeno Astro</option>
+                            <option value="quarta">Quarta-feira Sem Fim</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="dia" class="obrigatorio">Dia da sessão</label>
+                        <input type="date" id="dia" name="dia" min="2026-11-07" max="2026-11-13" required>
+                    </div>
+                    <div class="campo">
+                        <label for="ingressos" class="obrigatorio">Ingressos</label>
+                        <input type="number" id="ingressos" name="ingressos" min="1" max="6" step="1" value="1" required>
+                    </div>
+                    <div class="campo">
+                        <span>Horário</span>
+                        <div class="opcoes">
+                            <input type="radio" id="horario14" name="horario" value="14h" checked>
+                            <label for="horario14">14h</label>
+                            <input type="radio" id="horario17" name="horario" value="17h">
+                            <label for="horario17">17h</label>
+                            <input type="radio" id="horario20" name="horario" value="20h">
+                            <label for="horario20">20h</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acoes">
+                    <button type="reset" class="botao botao-secundario">Limpar</button>
+                    <button type="button" class="botao botao-secundario">Cancelar</button>
+                    <button type="submit" class="botao botao-principal">Reservar</button>
+                </div>
+
+            </form>
         </section>
 
         <section id="local">
@@ -126,6 +189,13 @@
             Telefone: <a href="tel:+551630000000">(16) 3000-0000</a>
         </address>
     </footer>
+
+    <script>
+        document.getElementById('formReserva').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Reserva enviada');
+        });
+    </script>
 
 </body>
 </html>
