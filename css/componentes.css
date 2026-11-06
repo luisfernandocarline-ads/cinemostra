@@ -1,1 +1,23 @@
 ﻿/* componentes.css: tabela, cartões e botões */
+
+main a:link {
+    color: #bf360c;
+    text-decoration: none;
+}
+
+main a:visited {
+    color: #6a1b9a;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+main a:active {
+    color: #e65100;
+}
+
+.passos {
+    list-style: decimal-leading-zero;
+    margin-left: 24px;
+}

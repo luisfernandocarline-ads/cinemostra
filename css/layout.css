@@ -10,3 +10,44 @@
 .rodape {
     text-align: center;
 }
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-horizontal ul {
+    list-style: none;
+}
+
+.menu-horizontal li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+.menu-horizontal a {
+    color: #ffffff;
+}
+
+.menu-horizontal a.ativo {
+    border-bottom: 3px solid #ffffff;
+}
+
+.menu-vertical ul {
+    list-style: none;
+}
+
+.menu-vertical li {
+    border-bottom: 1px solid #dddddd;
+}
+
+.menu-vertical a {
+    display: block;
+    padding: 10px 12px;
+    color: #bf360c;
+}
+
+.lateral > h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
