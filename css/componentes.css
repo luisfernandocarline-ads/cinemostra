@@ -21,3 +21,48 @@ main a:active {
     list-style: decimal-leading-zero;
     margin-left: 24px;
 }
+
+.tabela-sessoes {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #cccccc;
+}
+
+thead {
+    background-color: #bf360c;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fbe9e7;
+}
+
+main section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    padding: 20px 28px 24px 16px;
+    margin-bottom: 20px;
+}
+
+.filme {
+    background-color: #fafafa;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding: 16px 20px;
+}
+
+.filme img {
+    max-width: 100%;
+    height: auto;
+}
+
+.destaque {
+    background-color: #fff3e0;
+    border: 1px solid #bf360c;
+}
