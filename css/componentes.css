@@ -56,6 +56,7 @@ main section {
     border-radius: 6px;
     padding: 16px 20px;
     transition: transform 0.2s;
+    flex: 1 1 260px;
 }
 
 .filme img {
@@ -79,4 +80,32 @@ tbody tr:hover {
 label.obrigatorio::after {
     content: " *";
     color: red;
+}
+
+.grade-filmes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.filme-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes {
+    display: flex;
+    gap: 8px;
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
 }
