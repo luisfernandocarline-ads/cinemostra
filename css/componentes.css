@@ -56,7 +56,6 @@ main section {
     border-radius: 6px;
     padding: 16px 20px;
     transition: transform 0.2s;
-    flex: 1 1 260px;
 }
 
 .filme img {
@@ -67,6 +66,7 @@ main section {
 .destaque {
     background-color: #fff3e0;
     border: 1px solid #bf360c;
+    grid-column: 1 / -1;
 }
 
 tbody tr:hover {
@@ -83,8 +83,8 @@ label.obrigatorio::after {
 }
 
 .grade-filmes {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 24px;
 }
 
@@ -108,4 +108,35 @@ label.obrigatorio::after {
     display: flex;
     justify-content: flex-end;
     gap: 12px;
+}
+
+.classificacao {
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #bf360c;
+    color: #ffffff;
+}
+
+.grupo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 24px;
+}
+
+.campo-largo {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 700px) {
+    .grupo {
+        grid-template-columns: 1fr;
+    }
+
+    .topo {
+        flex-direction: column;
+    }
 }
