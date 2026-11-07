@@ -73,3 +73,50 @@ nav a {
 .menu-vertical a:hover {
     background-color: #eeeeee;
 }
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 260px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "topo topo"
+        "conteudo lateral"
+        "rodape rodape";
+    column-gap: 24px;
+}
+
+.topo {
+    grid-area: topo;
+}
+
+.conteudo {
+    grid-area: conteudo;
+    padding: 24px 0 24px 24px;
+}
+
+.lateral {
+    grid-area: lateral;
+    padding: 24px 24px 24px 0;
+}
+
+.rodape {
+    grid-area: rodape;
+}
+
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-areas:
+            "topo"
+            "conteudo"
+            "lateral"
+            "rodape";
+    }
+
+    .conteudo,
+    .lateral {
+        padding: 16px;
+    }
+}
