@@ -55,6 +55,7 @@ main section {
     border: 1px solid #dddddd;
     border-radius: 6px;
     padding: 16px 20px;
+    transition: transform 0.2s;
 }
 
 .filme img {
@@ -65,4 +66,17 @@ main section {
 .destaque {
     background-color: #fff3e0;
     border: 1px solid #bf360c;
+}
+
+tbody tr:hover {
+    background-color: #ffccbc;
+}
+
+.filme:hover {
+    transform: translateY(-4px);
+}
+
+label.obrigatorio::after {
+    content: " *";
+    color: red;
 }
